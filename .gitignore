@@ -1,0 +1,29 @@
+# Archivos del IDE JetBrains (.idea)
+.idea/
+
+# Archivos de configuración del entorno
+.env
+*.env
+
+# Archivos de logs
+*.log
+logs/
+*.pid
+
+# Archivos generados por Docker
+**/node_modules
+**/vendor
+**/__pycache__/
+
+# Volúmenes temporales
+docker-volumes/
+grafana_data/
+
+# Archivos de backup temporales
+*.tar.gz
+*.sql
+*.bak
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
