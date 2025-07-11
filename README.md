@@ -50,14 +50,11 @@ Editar
 ```bash
 docker-compose up -d
 Si deseas reiniciar todo borrando contenedores y volúmenes:
-
-bash
-Copiar
-Editar
 docker-compose down -v
 ⚠️ Importante: Los volúmenes están montados para persistencia real (dashboards, configuraciones, logs). Evita el uso de volúmenes anónimos si quieres conservar la configuración entre reinicios.
+```
 
-🌐 Accesos
+## 🌐 Accesos
 Grafana: http://localhost:3260
 Usuario: admin
 Contraseña: admin
@@ -72,7 +69,7 @@ cAdvisor: http://localhost:8082
 
 Node Exporter: http://localhost:9100
 
-📊 Dashboards recomendados (ID de Grafana)
+## 📊 Dashboards recomendados (ID de Grafana)
 Puedes importarlos desde la opción “Import Dashboard” en Grafana:
 
 Dashboard	ID	Fuente
@@ -82,7 +79,7 @@ Node Exporter Full	1860	Grafana.com
 Loki Logs Overview	12019	Grafana.com
 Blackbox Exporter Endpoint Monitoring	9964	Grafana.com
 
-📦 Volúmenes persistentes
+##  📦 Volúmenes persistentes
 ./grafana/data: Dashboards, datasources y credenciales.
 
 ./prometheus/prometheus.yml: Scrape configs.
@@ -91,12 +88,9 @@ Blackbox Exporter Endpoint Monitoring	9964	Grafana.com
 
 ./promtail/promtail-config.yaml: Paths y targets de logs.
 
-📌 Notas adicionales
+## 📌 Notas adicionales
 Los errores de permisos (Permission denied) pueden solucionarse ejecutando:
 
-bash
-Copiar
-Editar
 sudo chown -R 472:472 grafana/data
 (472 es el UID/GID por defecto usado por el contenedor de Grafana)
 
